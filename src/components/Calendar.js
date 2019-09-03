@@ -4,6 +4,7 @@ import Date from './Date'
 const Calendar = () => {
 
   let [date, setDate] = useState(1);
+
   let dates = [];
 
   const dateGen = () => {
@@ -31,7 +32,7 @@ const Calendar = () => {
       <div>
         {newDates.map(dates => {
           return (
-            <Date dates={dates} />
+            <Date key={dates} dates={dates} setDate={setDate}/>
           );
         })}
       </div>
