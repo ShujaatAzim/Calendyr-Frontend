@@ -7,17 +7,17 @@ import DayView from './DayView'
 class Calendar extends React.Component {
   state = {
     allDates: [],
-    currentDate: 1
+    currentDate: 0
   }
   
   componentDidMount() {
     let dates = []
-    for(let i = 1; i < 32; i++) {
+    for(let i = 1; i < 31; i++) {
       dates.push({date: i, learning: false, project: false, algorithms: false, networking: false})
     }
     this.setState({
       allDates: dates,
-      currentDate: 1
+      currentDate: 0
     })
   }
 
@@ -30,17 +30,16 @@ class Calendar extends React.Component {
   }
 
   dateChange = (index) => {
-    console.log(index)
     this.setState({
-      currentDate: this.state.allDates[index].date - 2
+      currentDate: index
     })
   }
 
   render() {
     const currentDate = this.state.allDates[this.state.currentDate]
 
-    const days = this.state.allDates.map(date => {
-      return <Date key={date.date} currentDate={currentDate} dateObj={date} dateChange={this.dateChange} />
+    const days = this.state.allDates.map((date, index) => {
+      return <Date key={index} currentDate={currentDate} index={index} date={date} dateChange={this.dateChange} />
     })
 
     return (
