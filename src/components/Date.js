@@ -6,18 +6,12 @@ class Date extends React.Component {
     selected: false
   }
 
-  select = () => {
-
-  }
-
   render() {
     
     const { dateChange, index } = this.props
     
     return (
-      <span onClick={
-        () => dateChange(index)
-        }>
+      <span onClick={() => dateChange(index)}>
         {" "}{index + 1}
       </span>
     )

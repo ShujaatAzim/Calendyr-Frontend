@@ -12,7 +12,7 @@ class Calendar extends React.Component {
   
   componentDidMount() {
     let dates = []
-    for(let i = 1; i < 31; i++) {
+    for(let i = 1; i < 32; i++) {
       dates.push({date: i, learning: false, project: false, algorithms: false, networking: false})
     }
     this.setState({
@@ -44,8 +44,8 @@ class Calendar extends React.Component {
 
     return (
       <div style={{ textAlign: "center" }}>
-        <h1>September</h1>
-            {days}
+        <h1>OCTOBER</h1>
+            <span>{" "}{days}{" "}</span>
           <br />
           <div>
             <DayView currentDate={currentDate} toggleActivity={this.toggleActivity} />
