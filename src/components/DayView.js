@@ -1,7 +1,16 @@
 import React from 'react'
+import Activity from './Activity'
 
 class DayView extends React.Component {
 
+  state = {
+    allActivities: []
+  }
+
+  handleNewActivity = (event) => {
+    event.preventDefault()
+    console.log("submitted")
+  }
 
   render() {
     const { currentDate } = this.props; 
@@ -21,6 +30,14 @@ class DayView extends React.Component {
             <input type="checkbox" checked={currentDate.algorithms} onClick={() => this.props.toggleActivity('algorithms')} onChange={() => ""} />Algorithms{" "}
             <input type="checkbox" checked={currentDate.networking} onClick={() => this.props.toggleActivity('networking')} onChange={() => ""} />Networking{" "}
         </div>
+          <div>
+            <br />
+            Add New Activity:
+            <form onSubmit={this.handleNewActivity}>
+              <input type="text" />
+              <input type="submit" />
+            </form>
+          </div>
       </div>
       )
   }
