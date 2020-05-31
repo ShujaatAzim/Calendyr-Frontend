@@ -8,12 +8,15 @@ const App = () => {
   const [date, setDate] = useState(new Date())
   const [dateNumber, setDateNumber] = useState(null)
   const [dateMonth, setDateMonth] = useState(null)
+  const [dateYear, setDateYear] = useState(null)
 
   useEffect(() => {
-    let number = (date.getDate() < 10 ? '0' : '') + date.getDate()
+    let number = date.getDate()
     let month = date.toLocaleString('default', { month: 'long' })
+    let year = date.getFullYear()
     setDateNumber(number)
     setDateMonth(month)
+    setDateYear(year)
   }, [date])
 
   const changeDate = date => {
@@ -22,8 +25,13 @@ const App = () => {
 
   return (
     <div>
-      <Calendar calendarType="US" onChange={changeDate} value={date} />
-      <DateView date={dateNumber} month={dateMonth} />
+      <div>
+        <Calendar calendarType="US" onChange={changeDate} value={date} />
+      </div>
+      <br />
+      <div>
+        <DateView date={dateNumber} month={dateMonth} year={dateYear} />
+      </div>
     </div>
   )
 };
