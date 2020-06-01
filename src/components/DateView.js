@@ -1,25 +1,33 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Card } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const DateView = props => {
 
   const { date, month, year } = props
-
-  useEffect(() => {
-
-  }, [])
+  const activities = ["Activity 1", "Activity 2", "Activity 3"]
 
   return (
     <div>
       <Card style={{ width: '350px' }}>
         <Card.Body>
           <Card.Title>
-            {month}{" "}{date}{date === 1 ? "st" : date === 2 ? "nd" : date === 3 ? "rd" : date === 31 ? "st" : "th"},{" "}{year}
+            {month}{" "}{date}
+              {date === 1 || date === 21 || date === 31 ? "st" : date === 2 || date === 22 ? "nd" : date === 3 || date === 23 ? "rd" : "th"}
+              ,{" "}{year}
           </Card.Title>
           <Card.Subtitle className="mb-2 text-muted">Things to do:</Card.Subtitle>
           <Card.Text>
-            This area will hold the activities.
+            <ul style={{ listStyleType: "none" }}>
+            {activities.map(activity => {
+              return(
+              <li>
+                <input type="checkbox" />
+                <label>{activity}</label>
+              </li>
+              )
+            })}
+            </ul>
           </Card.Text>
         </Card.Body>
       </Card>
