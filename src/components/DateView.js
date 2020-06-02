@@ -1,4 +1,5 @@
 import React from 'react'
+import Activity from '../Components/Activity'
 import { Card } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -20,11 +21,8 @@ const DateView = props => {
           <Card.Text>
             <ul style={{ listStyleType: "none" }}>
             {activities.map(activity => {
-              return(
-              <li>
-                <input type="checkbox" />
-                <label>{activity}</label>
-              </li>
+              return (
+                <Activity activity={activity} />
               )
             })}
             </ul>
