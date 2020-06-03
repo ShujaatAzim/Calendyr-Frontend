@@ -9,6 +9,7 @@ const CalendarContainer = props => {
 
   const changeDate = date => {
     props.setDate(date)
+    console.log(date)
   }
 
   return (

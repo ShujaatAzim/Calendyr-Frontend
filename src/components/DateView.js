@@ -22,7 +22,7 @@ const DateView = props => {
             <ul style={{ listStyleType: "none" }}>
             {activities.map(activity => {
               return (
-                <Activity activity={activity} />
+                <li><Activity key={activity} activity={activity} /></li>
               )
             })}
             </ul>
