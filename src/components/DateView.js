@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 const DateView = props => {
 
   const { date, month, year } = props
-  const activities = ["Activity 1", "Activity 2", "Activity 3"]
+  const { activities } = props
 
   return (
     <div>
@@ -22,7 +22,7 @@ const DateView = props => {
             <ul style={{ listStyleType: "none" }}>
             {activities.map(activity => {
               return (
-                <li><Activity key={activity} activity={activity} /></li>
+                <li><Activity key={activity} activity={activity.name} /></li>
               )
             })}
             </ul>

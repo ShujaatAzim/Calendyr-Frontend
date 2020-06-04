@@ -18,7 +18,7 @@ const DateViewContainer = props => {
   }, [date])
 
   return (
-    <DateView date={dateNumber} month={dateMonth} year={dateYear} />
+    <DateView date={dateNumber} month={dateMonth} year={dateYear} activities={props.activities} />
   )
 }
 
