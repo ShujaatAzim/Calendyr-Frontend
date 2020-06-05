@@ -4,7 +4,7 @@ const Activity = props => {
   return (
     <>
       <input type="checkbox" value={props.activity.complete} />
-      <label>{props.activity}</label>
+      <label>{props.activity.name}</label>
     </>
   )
 }
