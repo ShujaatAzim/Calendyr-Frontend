@@ -1,23 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import CalendarContainer from './ContainerComponents/CalendarContainer';
-import DateViewContainer from './ContainerComponents/DateViewContainer';
+import React, { useState } from 'react';
+import 'react-modern-calendar-datepicker/lib/DatePicker.css';
+import { Calendar, utils } from 'react-modern-calendar-datepicker';
 
 const App = () => {
 
-  const [date, setDate] = useState(new Date())
-  const [activities, setActivities] = useState([])
-
-  useEffect(() => {
-    fetch('http://localhost:3000/activities')
-    .then(resp => resp.json())
-    .then(data => setActivities(data))
-  }, [])
+  const [selectedDay, setSelectedDay] = useState(null);
+  const today = utils().getToday();
 
   return (
-    <div>
-        <CalendarContainer date={date} setDate={setDate} />
-      <br />
-        <DateViewContainer date={date} activities={activities}/>
+    <div style={{ textAlign: "center" }}>
+      <Calendar value={selectedDay} onChange={setSelectedDay} shouldHighlightWeekends maximumDate={today} />
     </div>
   )
 };
