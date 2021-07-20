@@ -9,7 +9,19 @@ const App = () => {
 
   return (
     <div style={{ textAlign: "center" }}>
-      <Calendar value={selectedDay} onChange={setSelectedDay} shouldHighlightWeekends maximumDate={today} />
+      <Calendar 
+        value={selectedDay} 
+        onChange={setSelectedDay} 
+        shouldHighlightWeekends 
+        maximumDate={today} 
+        customDaysClassName={[
+          { year: 2021, month: 7, day: 6, className: "one-task" },
+          { year: 2021, month: 7, day: 7, className: "two-task" },
+          { year: 2021, month: 7, day: 8, className: "three-task" },
+          { year: 2021, month: 7, day: 9, className: "four-task" },
+          { year: 2021, month: 7, day: 10, className: "five-task" }
+        ]}  
+      />
     </div>
   )
 };
