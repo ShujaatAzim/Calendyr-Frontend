@@ -13,7 +13,8 @@ const App = () => {
         value={selectedDay} 
         onChange={setSelectedDay} 
         shouldHighlightWeekends 
-        maximumDate={today} 
+        maximumDate={today}
+        calendarSelectedDayClassName="selected-day" 
         customDaysClassName={[
           { year: 2021, month: 7, day: 6, className: "one-task" },
           { year: 2021, month: 7, day: 7, className: "two-task" },

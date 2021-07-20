@@ -1,19 +1,33 @@
+.selected-day {
+  background-color: rosybrown !important;
+}
+
 .one-task {
   background-color: rgb(159, 235, 159);
+  border-radius: 0;
+  margin: 1px;
 }
 
 .two-task {
   background-color: rgb(123, 238, 123);
+  border-radius: 0;
+  margin: 1px;
 }
 
 .three-task {
   background-color: rgb(57, 201, 57);
+  border-radius: 0;
+  margin: 1px;
 }
 
 .four-task {
   background-color: rgb(36, 167, 36);
+  border-radius: 0;
+  margin: 1px;
 }
 
 .five-task {
   background-color: rgb(21, 117, 21);
+  border-radius: 0;
+  margin: 1px;
 }
