@@ -31,3 +31,10 @@
   border-radius: 0;
   margin: 1px;
 }
+
+.more-task {
+  background-color: rgb(6, 51, 6);
+  border-radius: 0;
+  margin: 1px;
+  color: white !important;
+}
