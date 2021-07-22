@@ -30,6 +30,7 @@ const App = () => {
         {selectedDay ? 
         <h3>{selectedDay.month}/{selectedDay.day}/{selectedDay.year}</h3> 
         : null }
+        
       </div>
     </div>
   )
