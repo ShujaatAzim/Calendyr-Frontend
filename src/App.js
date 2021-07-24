@@ -8,7 +8,7 @@ const App = () => {
   const today = utils().getToday();
 
   return (
-    <div style={{ textAlign: "center", display: "flex" }}>
+    <div style={{ textAlign: "center", display: "flex", margin: "2rem" }}>
       <div>
       <Calendar 
         value={selectedDay} 
@@ -26,11 +26,11 @@ const App = () => {
         ]}  
       />
       </div>
-      <div>
+      <div style={{ marginLeft: "3rem" }}>
         {selectedDay ? 
         <h3>{selectedDay.month}/{selectedDay.day}/{selectedDay.year}</h3> 
         : null }
-        
+
       </div>
     </div>
   )
