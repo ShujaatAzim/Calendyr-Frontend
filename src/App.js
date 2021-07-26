@@ -17,12 +17,12 @@ const App = () => {
         maximumDate={today}
         calendarSelectedDayClassName="selected-day" 
         customDaysClassName={[
-          { year: 2021, month: 7, day: 6, className: "one-task" },
-          { year: 2021, month: 7, day: 7, className: "two-task" },
-          { year: 2021, month: 7, day: 8, className: "three-task" },
-          { year: 2021, month: 7, day: 9, className: "four-task" },
-          { year: 2021, month: 7, day: 10, className: "five-task" },
-          { year: 2021, month: 7, day: 11, className: "more-task" }
+          { year: 2021, month: 7, day: 4, className: "one-task" },
+          { year: 2021, month: 7, day: 5, className: "two-task" },
+          { year: 2021, month: 7, day: 6, className: "three-task" },
+          { year: 2021, month: 7, day: 7, className: "four-task" },
+          { year: 2021, month: 7, day: 8, className: "five-task" },
+          { year: 2021, month: 7, day: 9, className: "more-task" }
         ]}  
       />
       </div>
