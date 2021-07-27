@@ -1,36 +1,20 @@
 import React, { useState } from 'react';
 import 'react-modern-calendar-datepicker/lib/DatePicker.css';
-import { Calendar, utils } from 'react-modern-calendar-datepicker';
+import CalendarContainer from './ContainerComponents/CalendarContainer';
 
 const App = () => {
 
   const [selectedDay, setSelectedDay] = useState(null);
-  const today = utils().getToday();
 
   return (
     <div style={{ textAlign: "center", display: "flex", margin: "2rem" }}>
       <div>
-      <Calendar 
-        value={selectedDay} 
-        onChange={setSelectedDay} 
-        shouldHighlightWeekends 
-        maximumDate={today}
-        calendarSelectedDayClassName="selected-day" 
-        customDaysClassName={[
-          { year: 2021, month: 7, day: 4, className: "one-task" },
-          { year: 2021, month: 7, day: 5, className: "two-task" },
-          { year: 2021, month: 7, day: 6, className: "three-task" },
-          { year: 2021, month: 7, day: 7, className: "four-task" },
-          { year: 2021, month: 7, day: 8, className: "five-task" },
-          { year: 2021, month: 7, day: 9, className: "more-task" }
-        ]}  
-      />
+        <CalendarContainer selectedDay={selectedDay} setSelectedDay={setSelectedDay} />
       </div>
       <div style={{ marginLeft: "3rem" }}>
         {selectedDay ? 
         <h3>{selectedDay.month}/{selectedDay.day}/{selectedDay.year}</h3> 
         : null }
-
       </div>
     </div>
   )
