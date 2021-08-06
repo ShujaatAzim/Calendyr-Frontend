@@ -7,8 +7,8 @@ const App = () => {
   const [selectedDay, setSelectedDay] = useState(null);
 
   return (
-    <div style={{ textAlign: "center", display: "flex", margin: "2rem" }}>
-      <div>
+    <div style={{ display: "flex", margin: "2rem" }}>
+      <div style={{ textAlign: "center" }}>
         <CalendarContainer selectedDay={selectedDay} setSelectedDay={setSelectedDay} />
       </div>
       <div style={{ marginLeft: "3rem" }}>
