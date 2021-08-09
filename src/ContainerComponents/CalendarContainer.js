@@ -6,6 +6,8 @@ const CalendarContainer = props => {
   const today = utils().getToday();
   const [dates, setDates] = useState(null)
 
+  const { selectedDay, setSelectedDay } = props;
+
   useEffect(() => {
     setDates([
       { year: 2021, month: 8, day: 1, className: "one-task" },
@@ -21,8 +23,8 @@ const CalendarContainer = props => {
     <div>
       { dates ? 
       <Calendar 
-        value={props.selectedDay} 
-        onChange={props.setSelectedDay} 
+        value={selectedDay} 
+        onChange={setSelectedDay} 
         shouldHighlightWeekends 
         maximumDate={today}
         calendarSelectedDayClassName="selected-day" 
